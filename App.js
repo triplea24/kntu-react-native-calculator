@@ -1,42 +1,46 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.row}>
-          <View style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.buttonContainer}>
             <Text style={styles.text}>1</Text>
-          </View>
-          <View style={styles.buttonContainer}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonContainer}>
             <Text style={styles.text}>2</Text>
-          </View>
-          <View style={styles.buttonContainer}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonContainer}>
             <Text style={styles.text}>3</Text>
-          </View>
+          </TouchableOpacity>
         </View>
         <View style={styles.row}>
-          <View style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.buttonContainer}>
             <Text style={styles.text}>4</Text>
-          </View>
-          <View style={styles.buttonContainer}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonContainer}>
             <Text style={styles.text}>5</Text>
-          </View>
-          <View style={styles.buttonContainer}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonContainer}>
             <Text style={styles.text}>6</Text>
-          </View>
+          </TouchableOpacity>
         </View>
         <View style={styles.row}>
-          <View style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.buttonContainer}>
             <Text style={styles.text}>7</Text>
-          </View>
-          <View style={styles.buttonContainer}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonContainer}>
             <Text style={styles.text}>8</Text>
-          </View>
-          <View style={styles.buttonContainer}>
-            <Text style={styles.text}>9</Text>
-          </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.buttonContainer, { backgroundColor: "red" }]}
+          >
+            <Ionicons name="ios-backspace" size={64} color="white" />
+            {/* <Text style={styles.text}>9</Text> */}
+          </TouchableOpacity>
         </View>
       </View>
     );
