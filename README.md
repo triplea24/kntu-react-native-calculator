@@ -6,7 +6,7 @@ A simple calculator app written with React Native and Expo. The project used for
 
 Implement the following wireframe using Expo.
 
-![](./documents/wireframe.jpg)
+![Caclculator Wireframe](./documents/wireframe.jpg)
 
 ## Instruction
 

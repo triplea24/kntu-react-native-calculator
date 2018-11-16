@@ -7,14 +7,42 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.row}>
+          <TouchableOpacity
+            style={[styles.buttonContainer, { backgroundColor: "#ff8a63" }]}
+          >
+            <Text style={styles.text}>AC</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.buttonContainer, styles.greyButtonContainer]}
+          >
+            <Text style={styles.text}>/</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.buttonContainer, styles.greyButtonContainer]}
+          >
+            <Text style={styles.text}>*</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.buttonContainer, { backgroundColor: "red" }]}
+          >
+            <Ionicons name="ios-backspace" size={48} color="white" />
+            {/* <Text style={styles.text}>9</Text> */}
+          </TouchableOpacity>
+        </View>
+        <View style={styles.row}>
           <TouchableOpacity style={styles.buttonContainer}>
-            <Text style={styles.text}>1</Text>
+            <Text style={styles.text}>7</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.buttonContainer}>
-            <Text style={styles.text}>2</Text>
+            <Text style={styles.text}>8</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.buttonContainer}>
-            <Text style={styles.text}>3</Text>
+            <Text style={styles.text}>9</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.buttonContainer, styles.greyButtonContainer]}
+          >
+            <Text style={styles.text}>%</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.row}>
@@ -27,19 +55,44 @@ export default class App extends React.Component {
           <TouchableOpacity style={styles.buttonContainer}>
             <Text style={styles.text}>6</Text>
           </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.buttonContainer, styles.greyButtonContainer]}
+          >
+            <Text style={styles.text}>-</Text>
+          </TouchableOpacity>
         </View>
         <View style={styles.row}>
           <TouchableOpacity style={styles.buttonContainer}>
-            <Text style={styles.text}>7</Text>
+            <Text style={styles.text}>1</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.buttonContainer}>
-            <Text style={styles.text}>8</Text>
+            <Text style={styles.text}>2</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonContainer}>
+            <Text style={styles.text}>3</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            style={[styles.buttonContainer, { backgroundColor: "red" }]}
+            style={[styles.buttonContainer, styles.greyButtonContainer]}
           >
-            <Ionicons name="ios-backspace" size={64} color="white" />
-            {/* <Text style={styles.text}>9</Text> */}
+            <Text style={styles.text}>+</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.row}>
+          <TouchableOpacity style={styles.buttonContainer}>
+            <Text style={styles.text}>0</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonContainer}>
+            <Text style={styles.text}>.</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.buttonContainer, styles.greyButtonContainer]}
+          >
+            <Text style={styles.text}>( )</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.buttonContainer, styles.darkGreyButtonContainer]}
+          >
+            <Text style={styles.text}>=</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -60,16 +113,19 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   text: {
-    fontSize: 50
+    fontSize: 40,
+    textAlignVertical: "center",
+    textAlign: "center"
   },
   buttonContainer: {
     borderWidth: 2,
     margin: 10,
-    padding: 10,
-    width: 120,
-    height: 120,
+    width: 80,
+    height: 80,
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 60
-  }
+  },
+  greyButtonContainer: { backgroundColor: "#cccccc" },
+  darkGreyButtonContainer: { backgroundColor: "#737373" }
 });
