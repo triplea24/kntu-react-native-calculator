@@ -8,6 +8,14 @@ Implement the following wireframe using Expo.
 
 ![Caclculator Wireframe](./documents/wireframe.jpg)
 
+1. Use your own written custom components for buttons
+2. Use state in App.js to handle input
+3. Clean the code as much as you can
+
+#### Bonus
+1. Try to clean the code using Higher-Order function
+2. Write component generator (Higher-Order Component) to make the code even less
+
 ## Instruction
 
 1. First clone the repository
