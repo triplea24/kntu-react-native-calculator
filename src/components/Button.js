@@ -1,7 +1,7 @@
 import React from "react";
-import { TouchableOpacity, StyleSheet } from "react-native";
+import { TouchableOpacity, StyleSheet, Text } from "react-native";
 
-export default class Button extends React.Component {
+export default class Button extends React.PureComponent {
   render() {
     return (
       <TouchableOpacity
