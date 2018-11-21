@@ -16,8 +16,10 @@ export default class Button extends React.PureComponent {
 
 const styles = StyleSheet.create({
   container: {
-    borderWidth: 2,
-    margin: 10,
+    borderWidth: 1,
+    marginTop: 2,
+    marginLeft: 10,
+    marginRight: 10,
     width: 80,
     height: 80,
     alignItems: "center",

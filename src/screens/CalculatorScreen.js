@@ -28,10 +28,13 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.output}>{this.state.text}</Text>
+        <View style={styles.outputContainer}>
+          <Text style={styles.output}>{this.state.text}</Text>
+        </View>
         <View style={styles.row}>
           <ButtonWithText
-            style={{ backgroundColor: "#ff8a63" }}
+            style={styles.acButtonContainer}
+            textStyle={styles.acButtonText}
             text={"AC"}
             onPress={this.handleClearText}
           />
@@ -118,7 +121,7 @@ export default class App extends React.Component {
             onPress={this.createTextInputHandler(".")}
           />
           <ButtonWithText
-            text={"()"}
+            text={"( )"}
             style={styles.greyButtonContainer}
             onPress={this.handleParentheses}
           />
@@ -150,20 +153,18 @@ const styles = StyleSheet.create({
     textAlignVertical: "center",
     textAlign: "center"
   },
-  buttonContainer: {
-    borderWidth: 2,
-    margin: 10,
-    width: 80,
-    height: 80,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 60
-  },
   greyButtonContainer: { backgroundColor: "#cccccc" },
   darkGreyButtonContainer: { backgroundColor: "#737373" },
   output: {
     fontSize: 25,
     fontFamily: "Avenir",
     marginBottom: 10
-  }
+  },
+  outputContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  acButtonContainer: { backgroundColor: "#ff8a63" },
+  acButtonText: { color: "white" }
 });
